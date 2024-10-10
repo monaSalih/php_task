@@ -12,7 +12,7 @@
 
     session_start();
 
-    if($_server["REQUEST_METHOD"]=="POST"){
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
          if(!isset($_SESSION["users"]))
          {
          $_SESSION['users']=[];
