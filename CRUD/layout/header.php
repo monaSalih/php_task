@@ -9,7 +9,7 @@
 <body>
     <div class="bg-secondary text-center">
 
-        <h1 >
+        <h1 class="text-light">
           CRUD Application
         </h1>  
     </div>

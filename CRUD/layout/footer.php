@@ -1,5 +1,5 @@
 
-<footer>
+<footer class="container mt-5 fixed-bottom bg-primary">
     Hello World We do our first CRUD Application
 </footer>
 
