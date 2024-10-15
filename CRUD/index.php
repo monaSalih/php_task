@@ -10,6 +10,12 @@ if(isset($_GET['message'])){
     echo '<h6 class="container">'.$_GET['message'].'</h6>';
 }
 ?>
+<?php
+session_start();
+
+echo $_SESSION['user_loged'];
+
+?>
 
 <div class="container mt-5">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

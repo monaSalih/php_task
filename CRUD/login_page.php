@@ -18,8 +18,8 @@ if(isset($_POST['login'])){
  try   {
     if($statment->rowCount()>0){
         $user=$statment->fetch(PDO::FETCH_ASSOC);
-        // $user_id=$user['user_id'];
-        // $_SESSION['user_loged']= $user_id;
+        $user_id=$user['user_id'];
+        $_SESSION['user_loged']= $user_id;
         header('location:index.php');
 
     }else{
