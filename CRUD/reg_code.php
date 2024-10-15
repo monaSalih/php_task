@@ -1,7 +1,7 @@
 <?php
 require('conn.php');
 
-if(isset($_POST['add_student'])){
+if(isset($_POST['reg_user'])){
 $fname=$_POST['name'];
 // echo $fname;
 $email=$_POST['email'];
