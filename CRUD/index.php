@@ -48,7 +48,7 @@ if(isset($_GET['message'])){
                 <td>$user[user_name] </td>
                 <td>$user[user_email] </td>
                 <td>$user[user_mobile] </td>
-                <td><img src=$user[image] alt= srcset=> </td>
+                <td><img src='./{$user['image']}' alt= srcset= style=width:100px> </td>
                  <td><a href='./feature/update_page.php?id=$user[user_id]' class='btn btn-primary'>Edit</a>
                  </td>
                  <td><a href='./feature/delete.php?id=$user[user_id]' class='btn btn-danger'>Delete</a>  </td>
