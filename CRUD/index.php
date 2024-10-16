@@ -10,12 +10,7 @@ if(isset($_GET['message'])){
     echo '<h6 class="container">'.$_GET['message'].'</h6>';
 }
 ?>
-<?php
-session_start();
 
-echo $_SESSION['user_loged'];
-
-?>
 
 <div class="container mt-5">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -29,8 +24,10 @@ echo $_SESSION['user_loged'];
                 <th scope="col">User Id</th>
                 <th scope="col">User name</th>
                 <th scope="col">User Email</th>
+                <th scope="col">User mobile</th>
                 <th colspan="2" class="text-center">Action</th>
                 <!-- <th scope="col">Action</th> -->
+                 
             </tr>
         </thead>
         <tbody>
@@ -50,6 +47,8 @@ echo $_SESSION['user_loged'];
                 <td>$user[user_id] </td>
                 <td>$user[user_name] </td>
                 <td>$user[user_email] </td>
+                <td>$user[user_mobile] </td>
+                <td><img src=$user[image] alt= srcset=> </td>
                  <td><a href='./feature/update_page.php?id=$user[user_id]' class='btn btn-primary'>Edit</a>
                  </td>
                  <td><a href='./feature/delete.php?id=$user[user_id]' class='btn btn-danger'>Delete</a>  </td>
@@ -61,7 +60,7 @@ echo $_SESSION['user_loged'];
 
         </tbody>
     </table>
-    <form action="insert_data.php" method="post">
+    <form action="insert_data.php" method="post" enctype="multipart/form-data">
         <div class="modal fade container" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -84,6 +83,9 @@ echo $_SESSION['user_loged'];
                         <!-- password -->
                         <label for="password">User password</label>
                         <input type="text" placeholder="inter your name" name="password" class="form-control">
+                        <!-- image -->
+                        <label for="image">upload Image</label>
+                        <input type="file" placeholder="choose your image" name="image" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <!-- Updated buttons for Bootstrap 5 -->
